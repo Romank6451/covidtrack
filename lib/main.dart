@@ -1,5 +1,6 @@
 import 'package:covidtrack/intro/intro.dart';
 import 'package:flutter/material.dart';
+import 'package:location/location.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,10 +8,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Covid Track',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -40,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
      body: Container(
+
        
      ),
           );

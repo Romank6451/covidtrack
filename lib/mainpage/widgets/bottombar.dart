@@ -4,14 +4,26 @@ import 'package:covidtrack/mainpage/infected_areas/infected.dart';
 import 'package:covidtrack/mainpage/new_entry/Newentry.dart';
 import 'package:covidtrack/mainpage/track_path/track.dart';
 import 'package:flutter/material.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 
 class Bottombar extends StatefulWidget {
+  Function func;
+
+
+  Bottombar(this.func);
+
   @override
-  _BottombarState createState() => _BottombarState();
+  _BottombarState createState() => _BottombarState(func);
 }
 
 class _BottombarState extends State<Bottombar> {
-  @override
+ static String selectedid="";
+ Function func;
+
+
+ _BottombarState(this.func);
+
+ @override
   Widget build(BuildContext context) {
         double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
@@ -36,7 +48,7 @@ class _BottombarState extends State<Bottombar> {
                 alignment: Alignment.topCenter,
                 child: Padding(
                   padding: const EdgeInsets.only(top:5.0),
-                  child: Text('Click to expend',style: TextStyle(color: Colors.white),),
+//                  child: Text('Click to expend',style: TextStyle(color: Colors.white),),
                 ),
               )
               
@@ -72,9 +84,12 @@ class _BottombarState extends State<Bottombar> {
                         ),
                         Expanded(child: SizedBox()),
                         InkWell(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Track()));
-                            
+                          onTap: () async {
+//                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Track()));
+                            String cameraScanResult = await scanner.scan();
+                            print("datascaneed "+cameraScanResult);
+                            func(cameraScanResult);
+
                           },
                           child: Column(
                             children: <Widget>[
@@ -91,15 +106,16 @@ class _BottombarState extends State<Bottombar> {
                           },
                           child: Column(
                             children: <Widget>[
-                              Image.asset('asstes/images/Ellipse 23.png',scale: 1.3,),
+                              Image.asset('asstes/images/help.png',scale: 1.3,),
                               Text('Help \ncenter')
                             ],
                           ),
                         ),
                         Expanded(child: SizedBox()),
                         InkWell(
-                          onTap: (){
+                          onTap: () async {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Newentry()));
+
 
                           },
                           child: Column(

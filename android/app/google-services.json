@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "975712175840",
+    "firebase_url": "https://covidtrack-8987b.firebaseio.com",
+    "project_id": "covidtrack-8987b",
+    "storage_bucket": "covidtrack-8987b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975712175840:android:cd12c7e00690135344f285",
+        "android_client_info": {
+          "package_name": "com.appsvo.covidtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975712175840-cefi2gklbuqt2k72o2kj7g85n8pu7hs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTZrcl4U9IS3cs-_ysUbFGJoK0_T2goJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975712175840-cefi2gklbuqt2k72o2kj7g85n8pu7hs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

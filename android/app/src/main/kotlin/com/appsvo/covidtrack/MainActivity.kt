@@ -1,4 +1,4 @@
-package com.yourdomain.covidtrack
+package com.appsvo.covidtrack
 
 import io.flutter.embedding.android.FlutterActivity
 

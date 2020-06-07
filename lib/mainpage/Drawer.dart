@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class TutorialOverlay extends ModalRoute<void> {
   @override
-  Duration get transitionDuration => Duration(milliseconds: 500);
+  Duration get transitionDuration => Duration(milliseconds: 200);
 
   @override
   bool get opaque => false;
@@ -12,7 +12,7 @@ class TutorialOverlay extends ModalRoute<void> {
   bool get barrierDismissible => false;
 
   @override
-  Color get barrierColor => Colors.black.withOpacity(0.6);
+  Color get barrierColor => Colors.black.withOpacity(0.7);
 
   @override
   String get barrierLabel => null;
@@ -47,7 +47,7 @@ class TutorialOverlay extends ModalRoute<void> {
           child: Image.asset('asstes/images/menu_backgroun.png',fit: BoxFit.fill,),
         ),
          Positioned(
-            top: height/30,
+            top: 17,
             left: width/15,
             child: Row(
               children: <Widget>[
@@ -55,7 +55,7 @@ class TutorialOverlay extends ModalRoute<void> {
                   onTap: (){
                     Navigator.pop(context);
                   },
-                  child: Icon(Icons.arrow_back,size: 30,color: Colors.white,)),
+                  child: Icon(Icons.close,size: 30,color: Colors.white.withOpacity(0.7),)),
                 SizedBox(width: width/30,),
                 
               ],
@@ -66,7 +66,7 @@ class TutorialOverlay extends ModalRoute<void> {
             child: Container(
               width: width,
               height: 1,
-              color: Colors.white,
+              color: Colors.white.withOpacity(0.3),
             ),
           ),
 
@@ -76,13 +76,13 @@ class TutorialOverlay extends ModalRoute<void> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('Donate us',textScaleFactor: 1.4,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                Text('Donate us',textScaleFactor: 1.1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal),),
                 SizedBox(height: 15,),
-                Text('Share this app',textScaleFactor: 1.4,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                Text('Share this app',textScaleFactor: 1.1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal),),
                 SizedBox(height: 15,),
-                Text('Privacy and Polices',textScaleFactor: 1.4,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                Text('Privacy and Polices',textScaleFactor: 1.1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal),),
                 SizedBox(height: 15,),
-                Text('About us',textScaleFactor: 1.4,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                Text('About us',textScaleFactor: 1.1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal),),
                 SizedBox(height: height/3.5,),
                 Text('version 1.1.0',textScaleFactor: 1,style: TextStyle(color: Colors.white),),
               ],
